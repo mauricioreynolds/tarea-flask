@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Estudiantil - Inicio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">Sistema Estudiantil</div>
+        <nav>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/estudiantes">Estudiantes</a></li>
+                <li><a href="/contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="card hero">
+            <h1>Bienvenido al Portal de Gestión Estudiantil</h1>
+            <p>Plataforma para administrar información de alumnos, registros académicos y contacto.</p>
+            <a href="/estudiantes" class="btn">Ver Lista de Estudiantes</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sistema Estudiantil</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
