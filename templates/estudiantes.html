@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Estudiantil - Registro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">Sistema Estudiantil</div>
+        <nav>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/estudiantes">Estudiantes</a></li>
+                <li><a href="/contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>Registrar Nuevo Estudiante</h2>
+            <form id="formEstudiante">
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" placeholder="Ej. Carlos Mendoza" required>
+                </div>
+                <div class="form-group">
+                    <label for="carrera">Carrera:</label>
+                    <input type="text" id="carrera" placeholder="Ej. Ingeniería de Sistemas" required>
+                </div>
+                <div class="form-group">
+                    <label for="semestre">Semestre:</label>
+                    <input type="number" id="semestre" min="1" max="10" placeholder="Ej. 5" required>
+                </div>
+                <button type="submit" class="btn">Agregar Estudiante</button>
+            </form>
+        </section>
+
+        <section class="card">
+            <h2>Lista de Estudiantes Registrados</h2>
+            <table class="tabla">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nombre</th>
+                        <th>Carrera</th>
+                        <th>Semestre</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaEstudiantes">
+                    <tr>
+                        <td>1</td>
+                        <td>Mauricio Reynolds</td>
+                        <td>Ingeniería de Sistemas</td>
+                        <td>6.º Semestre</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Ana Pérez</td>
+                        <td>Informática</td>
+                        <td>4.º Semestre</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sistema Estudiantil</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
