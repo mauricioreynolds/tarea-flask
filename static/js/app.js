@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Lógica para agregar estudiantes dinámicamente a la tabla
     const formEstudiante = document.getElementById("formEstudiante");
     const tablaEstudiantes = document.getElementById("tablaEstudiantes");
 
@@ -26,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 2. Lógica para el formulario de contacto
+    
     const formContacto = document.getElementById("formContacto");
     const mensajeConfirmacion = document.getElementById("mensajeConfirmacion");
 
