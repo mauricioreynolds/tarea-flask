@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Estudiantil - Contacto</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">Sistema Estudiantil</div>
+        <nav>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/estudiantes">Estudiantes</a></li>
+                <li><a href="/contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>Formulario de Contacto</h2>
+            <form id="formContacto">
+                <div class="form-group">
+                    <label for="nombreContacto">Nombre:</label>
+                    <input type="text" id="nombreContacto" placeholder="Tu nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="correoContacto">Correo Electrónico:</label>
+                    <input type="email" id="correoContacto" placeholder="correo@ejemplo.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensajeContacto">Mensaje:</label>
+                    <textarea id="mensajeContacto" rows="4" placeholder="Escribe tu consulta aquí..." required></textarea>
+                </div>
+                <button type="submit" class="btn">Enviar Mensaje</button>
+            </form>
+            <p id="mensajeConfirmacion" class="exito"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sistema Estudiantil</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
